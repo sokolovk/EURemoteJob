@@ -2,6 +2,7 @@
 
 html {
     box-sizing: border-box;
+    font-size: $fontSize;
     height: 100%;
 }
 
@@ -16,7 +17,7 @@ body {
     color: $textColor;
     font-family: $fontFamily;
     font-weight: $fontWeight;
-    font-size: $fontSize;
+    font-size: 1rem;
     line-height: $lineHeight;
     height: 100%;
 }
@@ -47,7 +48,7 @@ section {
     min-height: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('~@img/webpack.png');
+    //background-image: url('~@img/webpack.png');
 }
 
 .content {
@@ -65,4 +66,30 @@ section {
 
 .icon {
     display: inline-block;
+}
+
+ul {
+    li {
+        list-style: none;
+    }
+}
+
+.position-relative {
+    position: relative;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+.m-0 {
+    margin: 0;
 }

@@ -22,6 +22,31 @@
         url('~@fonts/Roboto-Bold.woff') format('woff'),
         url('~@fonts/Roboto-Bold.ttf') format('truetype'),
         url('~@fonts/Roboto-Bold.svg#Roboto-Regular') format('svg');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    font-weight: normal;
+    src:  local('OpenSans'), local('OpenSans-Regular');
+    src:  url('~@fonts/OpenSans-Regular.eot');
+    src:  url('~@fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('~@fonts/OpenSans-Regular.woff') format('woff'),
+        url('~@fonts/OpenSans-Regular.ttf') format('truetype'),
+        url('~@fonts/OpenSans-Regular.svg#OpenSans-Regular') format('svg');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'YesevaOne';
+    font-weight: normal;
+    src:  local('YesevaOne'), local('YesevaOne-Regular');
+    src:  url('~@fonts/YesevaOne-Regular.eot');
+    src:  url('~@fonts/YesevaOne-Regular.eot?#iefix') format('embedded-opentype'),
+        url('~@fonts/YesevaOne-Regular.woff') format('woff'),
+        url('~@fonts/YesevaOne-Regular.ttf') format('truetype'),
+        url('~@fonts/YesevaOne-Regular.svg#YesevaOne-Regular') format('svg');
+    font-display: swap;
 }
 
 // Заголовки
@@ -31,25 +56,26 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: $fontFamily;
+    font-family: $fontYeseva;
+    color: $darkColor;
 }
 
 h1 {
-    font-size: 42px;
+    font-size: 4.286rem;
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 2.286rem;
 }
 
 h3 {
-    font-size: 28px;
+    font-size: 1.429rem;
 }
 
 h4 {
-    font-size: 18px;
+    font-size: 1.286rem;
 }
 
 h5 {
-    font-size: 16px;
+    font-size: 1.143rem;
 }

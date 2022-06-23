@@ -57,3 +57,13 @@
         font-size: $fMax;
     }
 }
+
+@mixin fluid-property($property, $fMin, $fMax, $wMin, $wMax, $units: px) {
+    #{$property}: $fMin;
+    @media (min-width: $wMin) {
+        #{$property}: calcFluidFontSize($fMin, $fMax, $wMin, $wMax, $units);
+    }
+    @media (min-width: $wMax) {
+        #{$property}: $fMax;
+    }
+}

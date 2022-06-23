@@ -1,3 +1,50 @@
 .page-header {
+    padding: 32px 0;
     position: relative;
+
+    &__logo {
+        font-size: 1.429rem;
+        img {
+            margin-right: 14px;
+        }
+    }
+
+    &__btn-wrap {
+        padding-left: 113px;
+    }
+}
+
+.main-nav {
+    &__list {
+        margin: 0 -16px;
+
+        > li {
+            margin: -8px 16px 0;
+            white-space: nowrap;
+        }
+
+        a {
+            font-size: 1.143rem;
+        }
+    }
+}
+
+.menu-item-has-children {
+    display: flex;
+    align-items: center;
+
+    &::after {
+        background-image: url('~@icons/arror-menu.svg');
+        background-repeat: no-repeat;
+        background-size: 12px 8px;
+        display: inline-block;
+        content: '';
+        margin-left: 10px;
+        height: 8px;
+        width: 12px;
+    }
+}
+
+.sub-menu {
+    display: none;
 }
