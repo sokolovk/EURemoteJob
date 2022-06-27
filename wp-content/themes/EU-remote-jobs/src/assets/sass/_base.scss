@@ -25,6 +25,7 @@ body {
 a {
     color: $linkColor;
     text-decoration: none;
+    line-height: 1;
 
     &:hover,
     &:active {
@@ -69,6 +70,8 @@ section {
 }
 
 ul {
+    padding-left: 0;
+
     li {
         list-style: none;
     }
@@ -80,6 +83,10 @@ ul {
 
 .text-center {
     text-align: center;
+}
+
+.text-right {
+    text-align: right;
 }
 
 .bold {
