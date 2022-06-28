@@ -1,0 +1,29 @@
+.hero {
+    background-repeat: no-repeat;
+    background-position: right center;
+
+    &__title {
+        max-width: 653px;
+        > * {
+            color: inherit;
+            line-height: 1.4;
+            margin: 0 0 24px;
+
+            span {
+                border-bottom: 5px solid $successColor;
+            }
+        }
+    }
+
+    &__content {
+        max-width: 456px;
+        > * {
+            font-size: 1.286rem;
+            line-height: 1.39;
+
+            &:last-child {
+                margin: 0 0 64px;
+            }
+        }
+    }
+}

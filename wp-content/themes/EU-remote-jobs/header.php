@@ -2,12 +2,21 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<?php get_template_part( 'template-parts/head' ); ?>
+
 </head>
+
+<?php
+// Initialize custom styles global.
+$GLOBALS['custom-styles'] = '';
+?>
 
 <?php $logo = get_field('logo', 'options'); ?>
 <?php $header_btn = get_field('header_button', 'options'); ?>
 
+
+
 <body <?php body_class("page-body"); ?>>
+
     <div class="wrapper" id="app">
 
         <div class="content">
