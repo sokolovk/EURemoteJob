@@ -54,17 +54,16 @@ $GLOBALS['custom-styles']
                 <?php } ?>
             </div>
 
-            <div class="hero__col-image">
-                <?php if($showImgBg && $urlImgBg) { ?>
-                    <figure class="hero__image">
-                        <img class="lozad" data-src="<?php echo esc_url($urlImgBg);?>" alt="" />
+            <?php if($showImgBg && $urlImgBg) { ?>
+
+                <div class="hero__col-image">
+                    <figure class="hero__image position-relative m-0">
+                        <img class="lozad w-100" data-src="<?php echo esc_url($urlImgBg);?>" alt="" />
                     </figure>
-                <?php } ?>
-            </div>
+                </div>
 
+            <?php } ?>
         </div>
-
-
 
     </div>
 
