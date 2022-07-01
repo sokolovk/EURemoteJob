@@ -26,4 +26,47 @@
             }
         }
     }
+
+    &__btn-wrap {
+        .btn {
+            z-index: 2;
+        }
+
+        .outline {
+            border-radius: 12px;
+            content: '';
+            display: block;
+            position: absolute;
+            left: -10px;
+            top: 10px;
+            max-width: 200px;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #fff;
+            z-index: 1;
+
+            &::before,
+            &::after {
+                background-color: #fff;
+                content: '';
+                position: absolute;
+
+            }
+
+            &::before {
+                top: 47px;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 200px;
+                width: 1px;
+            }
+
+            &::after {
+                top: 50%;
+                left: 104px;
+                height: 1px;
+                width: 1000px;
+            }
+        }
+    }
 }

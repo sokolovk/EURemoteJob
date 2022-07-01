@@ -2,11 +2,8 @@ wp-admin/
 wp-includes/
 wp-content/index.php
 wp-content/languages/
-wp-content/plugins/akismet
-wp-content/plugins/advanced-custom-fields-pro
-wp-content/plugins/contact-form-7
-wp-content/plugins/flamingo
-wp-content/plugins/hello.php
+wp-content/uploads/
+wp-content/plugins/
 wp-content/plugins/index.php
 wp-content/themes/twentyfifteen/
 wp-content/themes/twentyseventeen/
