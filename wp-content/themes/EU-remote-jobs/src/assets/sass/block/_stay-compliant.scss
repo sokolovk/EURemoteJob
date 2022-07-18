@@ -1,0 +1,31 @@
+.section-stay-compliant {
+    background-image: linear-gradient(#f8f7ff, rgba(248, 247, 255, 0));
+
+    &__title {
+        max-width: 545px;
+        > * {
+            color: $darkColor;
+            line-height: 1.313;
+            margin: 0 0 24px;
+
+            span {
+                border-bottom: 5px solid $successColor;
+            }
+        }
+    }
+
+    &__content {
+        max-width: 744px;
+        padding-bottom: 104px;
+
+        > * {
+            font-size: 1.286rem;
+            line-height: 1.39;
+            margin: 0 0 1rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

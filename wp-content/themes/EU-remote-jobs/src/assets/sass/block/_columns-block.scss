@@ -1,0 +1,40 @@
+.columns-block {
+    background: linear-gradient(135deg, #00499e 0%, #001633 100%);
+    border-radius: 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7.5%;
+    padding: 48px 6.39%;
+    max-width: 1128px;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        color: #f6ffe4;
+        font-size: 2rem;
+        flex-grow: 1;
+        margin: 0 0 28px;
+    }
+
+    &__content {
+        flex-grow: 1;
+        padding-bottom: 56px;
+
+        > * {
+            color: #fff;
+            font-size: 1.286rem;
+            margin: 0 0 1rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__link {
+        padding: 15px 45px;
+    }
+}
