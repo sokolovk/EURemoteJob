@@ -1,0 +1,50 @@
+.s-nwl-press-releases {
+    border-top: 1px solid #dedede;
+    margin-top: 30px;
+
+    &__title {
+        color: $dangerColor;
+        @include fluid-font(14px, 18px, 600px, 1920px);
+        font-weight: bold;
+        line-height: 1;
+        margin: 40px 0 24px;
+    }
+
+    &__caption {
+        font-size: 21px;
+        font-weight: 500;
+        margin: 0 0 20px;
+    }
+
+    &__content-wrap {
+        > img {
+            float: right;
+            margin: 0 0 10px 40px;
+            max-width: 250px;
+
+            @include max-w(767px) {
+                margin-left: 0;
+                max-width: 100%;
+                float: none;
+            }
+        }
+    }
+
+    &__content,
+    & > * {
+        font-size: 16px;
+        line-height: 1.56;
+        letter-spacing: .14px;
+    }
+
+    &__btn {
+        border-radius: 0;
+        background-color: #0f43a8;
+        font-size: 14px;
+        text-transform: unset;
+        letter-spacing: .35px;
+        height: auto;
+        margin: 30px 0 5px;
+        padding: 12px 28px;
+    }
+}
