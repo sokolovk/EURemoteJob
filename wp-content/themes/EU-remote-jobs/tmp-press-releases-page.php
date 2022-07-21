@@ -6,10 +6,11 @@
 
 <?php get_header(); ?>
 
-<main id="main" class="main-press-releases" role="main">
+<main id="main" class="main-press-release" role="main">
     <div class="page-container">
-        <section class="press-releases-wrap">
-            <div>
+        <h2 class="press-release-title">Press Release</h2>
+        <div class="press-release-wrap">
+            <section>
                 <?php
                 $args = array(
                     'posts_per_page' => 10,
@@ -20,21 +21,23 @@
                 $query = new WP_Query($args); ?>
 
                 <?php if ($query->have_posts()) { ?>
-                    <div class="press-release">
+                    <div>
                         <?php while($query->have_posts()) {
                             $query->the_post(); ?>
 
-                            <a class="press-release__link" href="<?php echo get_permalink($post->ID) ?>">
+                            <a class="press-release" href="<?php echo get_permalink() ?>">
 
                                 <?php
                                 $content = get_the_content();
-                                $img_url = get_field('story_image', $post->ID);
+                                preg_match('/<img(.*)src(.*)=(.*)"(.*)"/U', $content, $regexResult);
+                                $firstImgScr = array_pop($regexResult);
+
                                 $trimmed_content = wp_trim_words($content, 40, '...');
                                 ?>
 
                                 <div class="press-release__img-wrap">
-                                    <?php if($img_url) { ?>
-                                    <img src="<?php echo $img_url ?>"
+                                    <?php if($firstImgScr) { ?>
+                                    <img src="<?php echo $firstImgScr ?>"
                                          alt="<?php the_title() ?>" />
                                     <?php } ?>
                                 </div>
@@ -58,7 +61,7 @@
                     </div>
                 <?php } ?>
                 <?php wp_reset_postdata(); ?>
-            </div>
+            </section>
 
             <aside>
                 <!-- begin subscribe pro -->
@@ -126,7 +129,7 @@
                 </div>
                 <!-- end subscribe form -->
             </aside>
-        </section>
+        </div>
     </div>
 </main>
 

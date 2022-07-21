@@ -7,7 +7,8 @@ $posts = get_sub_field('nwl_press_releases'); ?>
         $caption = $post->post_title;
         $content = $post->post_content;
         $trimmed_content = wp_trim_words($content,120, '...');
-        $urlImage = get_field('story_image', $post->ID); ?>
+        preg_match('/<img(.*)src(.*)=(.*)"(.*)"/U', $content, $regexResult);
+        $firstImgScr = array_pop($regexResult); ?>
 
         <article id="post-<?php echo $post->ID ?>"
                  class="s-nwl-press-releases">
@@ -16,10 +17,10 @@ $posts = get_sub_field('nwl_press_releases'); ?>
             </h4>
 
             <div class="s-nwl-press-releases__content-wrap">
-                <?php if($content && $urlImage) { ?>
-                    <img class="s-nwl-press-releases__story-img"
+                <?php if($content && $firstImgScr) { ?>
+                    <img class="s-nwl-press-releases__story-img" style="float: right;"
                          alt="<?php echo substr($caption, 0, 25) ?>"
-                         src="<?php echo $urlImage ?>" />
+                         src="<?php echo $firstImgScr ?>" />
                 <?php } ?>
                 <?php if($caption) { ?>
                     <h5 class="s-nwl-press-releases__caption">
@@ -32,7 +33,7 @@ $posts = get_sub_field('nwl_press_releases'); ?>
                     </div>
                 <?php } ?>
                 <div class="text-center">
-                    <a class="btn s-nwl-press-releases__btn" href="#">
+                    <a class="btn s-nwl-press-releases__btn" href="<?php echo get_permalink($post->ID); ?>">
                         Read the full press release here
                     </a>
                 </div>
@@ -40,7 +41,7 @@ $posts = get_sub_field('nwl_press_releases'); ?>
 
             <div class="social-share">
                 <?php /* Begin the share button for facebook */
-                $urlStory = urlencode(get_permalink($p->ID));
+                $urlStory = urlencode(get_permalink($post->ID));
                 $urlFacebook = 'https://www.facebook.com/sharer/sharer.php?u=' . $urlStory; ?>
                 <a class="social-share__link" href="<?php echo $urlFacebook; ?>" target="_blank">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/icons/fb2.svg" alt="face-book" width="10">
@@ -48,7 +49,7 @@ $posts = get_sub_field('nwl_press_releases'); ?>
                 <?php /* End the share button for facebook */
 
                 /* Begin the share button for twitter */
-                $titleName = urlencode($titleName);
+                $titleName = urlencode($caption);
                 $urlTwitter = 'https://twitter.com/intent/tweet?text=' . $titleName . '&amp;url=' . $urlStory . '&amputm_source=twitter_share&via=weedweeknews';
                 ?>
                 <a class="social-share__link" href="<?php echo $urlTwitter ?>" target="_blank">

@@ -1,0 +1,138 @@
+.single-press-releases-wrap {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-top: 40px;
+
+    @include max-w(767px) {
+        display: block;
+    }
+
+    > aside {
+        @include max-w(767px) {
+            display: none;
+        }
+    }
+}
+
+.single-press-releases {
+    border-bottom: 1px solid #dadada;
+    margin-bottom: 60px;
+    padding-bottom: 60px;
+    max-width: 740px;
+    width: 85%;
+
+    @include max-w(767px) {
+        width: 100%;
+    }
+
+    &__category {
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 1.53;
+        letter-spacing: 1.13px;
+        margin: 0 0 10px;
+    }
+
+    &__title {
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 1.27;
+        letter-spacing: 1.5px;
+        margin: 0 0 20px;
+    }
+
+    &__date-wrap {
+        @include max-w(426px) {
+            margin-bottom: 15px;
+        }
+
+        span {
+            display: inline-block;
+            font-size: 1.2rem;
+            line-height: 1;
+            letter-spacing: .12px;
+
+            &:first-child {
+                border-right: 1px solid #272727;
+                padding-right: 10px;
+            }
+
+            &:last-child {
+                padding-left: 10px;
+            }
+        }
+    }
+
+    &__content {
+        border-top: 1px solid #dadada;
+        margin: 20px 0 30px;
+        padding-top: 20px;
+        font-size: 1.6rem;
+        line-height: 1.44;
+        letter-spacing: .16px;
+
+        & > * {
+            font-size: 1.6rem;
+            line-height: 1.44;
+            letter-spacing: .16px;
+        }
+
+        p {
+            margin: 0 0 15px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        article {
+            > img {
+                @include max-w(425px) {
+                    margin: 10px 0 !important;
+                    float: none !important;
+                }
+            }
+        }
+    }
+
+    .social-share {
+        max-width: 100%;
+        margin: 0;
+
+        span {
+            align-self: end;
+            display: inline-block;
+            font-size: 1.4rem;
+            margin-right: 15px;
+        }
+
+        a {
+            margin: 0 15px;
+        }
+
+        &--bottom {
+            display: block;
+
+            span {
+                margin-right: 7px;
+            }
+
+            a {
+                margin: 0 7px;
+            }
+        }
+    }
+}
+
+/* stylelint-disable no-descending-specificity */
+.more-press-releases {
+    margin-bottom: 20px;
+
+    a {
+        font-size: 1.4rem;
+
+        &::after {
+            bottom: 10px;
+        }
+    }
+}

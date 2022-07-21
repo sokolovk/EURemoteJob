@@ -5,7 +5,7 @@
     background-color: $primaryColor;
     border-radius: 12px;
     font-family: $fontRoboto;
-    font-size: 1.143rem;
+    font-size: 1.6rem;
     line-height: 1;
     display: inline-block;
     vertical-align: middle;
@@ -29,11 +29,38 @@
 
     &--xl {
         padding: 20px 25px;
-        font-size: 1.286rem;
+        font-size: 1.8rem;
     }
 
     &--success {
         background-color: $successColor;
         color: #04044a;
+    }
+}
+
+.btn-underline {
+    border-bottom: 1px solid #e73c3e;
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-top: 40px;
+    line-height: 1.71;
+    letter-spacing: .83px;
+    margin: 0 auto;
+    text-align: left;
+    position: relative;
+
+    &::after {
+        display: block;
+        content: '';
+        border-top: 2px solid #000;
+        border-right: 2px solid #000;
+        position: absolute;
+        bottom: 7px;
+        right: -15px;
+        transform: rotate(45deg);
+        height: 7px;
+        width: 7px;
     }
 }

@@ -11,7 +11,7 @@
     }
 
     &__caption {
-        font-size: 21px;
+        font-size: 2.1rem;
         font-weight: 500;
         margin: 0 0 20px;
     }
@@ -32,7 +32,7 @@
 
     &__content,
     & > * {
-        font-size: 16px;
+        font-size: 1.6rem;
         line-height: 1.56;
         letter-spacing: .14px;
     }
@@ -40,7 +40,7 @@
     &__btn {
         border-radius: 0;
         background-color: #0f43a8;
-        font-size: 14px;
+        font-size: 1.4rem;
         text-transform: unset;
         letter-spacing: .35px;
         height: auto;
