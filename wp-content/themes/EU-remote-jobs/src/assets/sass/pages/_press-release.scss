@@ -1,0 +1,27 @@
+.page-template-tmp-press-releases-page {
+    .press-release-block {
+        border: none;
+        margin-top: 0;
+        padding: 30px 25px 50px 15px;
+
+        &__logo {
+            margin-bottom: 30px;
+        }
+
+        &__title {
+            max-width: 260px;
+            margin: 0 auto;
+
+            > * {
+                padding-bottom: 25px;
+                margin-bottom: 25px;
+            }
+        }
+
+        &__content {
+            ul {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
